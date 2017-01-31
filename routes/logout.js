@@ -1,12 +1,16 @@
 const express = require('express');
 const router = express.Router();
+const request = require('request');
 
 router.get('/', (req, res, next) => {
-  res.render('index');
-});
+  req.session.access_token = null;
+  var url;
+res.redirect('../')
 
-router.get('https://www.facebook.com/connect/', (req, res, next) => {
-  res.redirect('/profile')
 })
+
+
+
+
 
 module.exports = router;
